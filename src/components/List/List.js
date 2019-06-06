@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator.js';
+import {listData} from '../../data/dataStore';
+
 
 
 class List extends React.Component {
@@ -31,7 +33,7 @@ class List extends React.Component {
 		columns: [
 		...state.columns,
 		{
-		key: state.columns[state.columns.length-1].key+1,
+		key: state.columns.length,
 		title,
 		icon: 'list-alt',
 		cards: []
@@ -50,7 +52,7 @@ class List extends React.Component {
         </div>
         <div className ={styles.columns}>
         	{this.state.columns.map(({key, ...columnProps}) =>(
-						<Column key={key} {...columnProps} />
+						<Column key={key} {...columnProps}  />
 					))}
         </div>
 				<Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
