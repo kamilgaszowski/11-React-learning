@@ -6,9 +6,9 @@
   "scripts": {
     "lint": "eslint src/",
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
-  },
-  "husky": {
+    "build": "webpack --mode production",
+
+    "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
@@ -16,6 +16,8 @@
   "lint-staged": {
     "src/**/*.js": "eslint"
   },
+  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
