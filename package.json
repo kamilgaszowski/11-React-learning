@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "lint": "eslint src/",
-    "fix": "eslint --fix src/"
+    "lint": "eslint src/"
   },
   "husky": {
     "hooks": {
@@ -35,6 +34,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^2.4.0",
     "lint-staged": "^8.2.0",
