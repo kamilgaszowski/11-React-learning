@@ -4,6 +4,26 @@ import List from '../List/List.js';
 import { pageContents, listData } from '../../data/dataStore';
 
 class App extends React.Component {
+
+    state = {
+		list: this.props.list || [],
+    }
+    
+    addList(title){
+		this.setState(state => (
+		{
+		list: [
+		...state.list,
+		{
+		key: state.list.length,
+		title,
+		icon: 'list-alt',
+		cards: []
+		}
+		]
+		}
+		));
+	}
         render() {
                 return ( <
                     main className = { styles.component } >
