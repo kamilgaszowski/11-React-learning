@@ -1,4 +1,4 @@
-const test = 4222
+
 import styles from './App.scss';
 import List from '../List/List.js';
 import { pageContents, listData } from '../../data/dataStore';
