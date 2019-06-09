@@ -3,6 +3,7 @@ import styles from './Creator.scss';
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 
+const test ="1"
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
@@ -53,7 +54,7 @@ class Creator extends React.Component {
         />
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={() => this.handleOK()}>OK</Button>
-          <Button onClick={() => { if (window.confirm('Are you sure you wish to delete this item?'))this.handleCancel()}} variant='danger'>cancel</Button>
+          <Button onClick={() => {if (window.confirm('Are you sure you wish to delete this item?')) this.handleCancel()}} variant='danger'>cancel</Button>
         </div>
       </div>
     );
