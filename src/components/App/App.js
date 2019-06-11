@@ -1,39 +1,43 @@
-
+const test = "1"
+import React from 'react';
 import styles from './App.scss';
 import List from '../List/List.js';
 import { pageContents, listData } from '../../data/dataStore';
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
 
     state = {
-		list: this.props.list || [],
+      list: this.props.list || [],
+    }
+    static propTypes = {
+      list: PropTypes.node,
     }
     
     addList(title){
-		this.setState(state => (
-		{
-		list: [
-		...state.list,
-		{
-		key: state.list.length,
-		title,
-		icon: 'list-alt',
-		cards: []
-		}
-		]
-		}
-		));
-	}
-        render() {
-                return ( <
-                    main className = { styles.component } >
-                    <h1 className = { styles.title } > { pageContents.title } < /h1>
-                     <h2 className = { styles.subtitle } > { pageContents.subtitle } < /h2>
-                      <List {...listData}/>
+      this.setState(state => (
+        {
+          list: [
+            ...state.list,
+            {
+              key: state.list.length,
+              title,
+              icon: 'list-alt',
+              cards: [],
+            },
+          ],
+        }
+      ));
+    }
+    render() {
+      return ( <main className = { styles.component } >
+        <h1 className = { styles.title } > { pageContents.title } </h1>
+        <h2 className = { styles.subtitle } > { pageContents.subtitle } </h2>
+        <List {...listData}/>
                   
-                     </main>
-                        )
-                    }
-                }
+      </main>
+      );
+    }
+}
 
-                export default App;
+export default App;

@@ -20,32 +20,32 @@ class Column extends React.Component {
   }
 
   addCard(title){
-		this.setState(state => (
-		{
-		cards: [
-		...state.cards,
-		{
-		key: state.cards.lenght,
-		title,
-		}
-		]
-		}
-		));
-	}
+    this.setState(state => (
+      {
+        cards: [
+          ...state.cards,
+          {
+            key: state.cards.lenght,
+            title,
+          },
+        ],
+      }
+    ));
+  }
 
   render() {
     return (
       <section className = {styles.component}>
         <h3 className={styles.title}><span className={styles.icon}><Icon name={this.props.icon}/></span>{this.props.title}</h3>
     
-       <div className ={styles.columns}>
-       {this.state.cards.map(({key, ...cardProps}) =>(
-         <Card key={key} {...cardProps} />
-       ))}
-     </div>
-     <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
-     </section>
-    )
+        <div className ={styles.columns}>
+          {this.state.cards.map(({key, ...cardProps}) =>(
+            <Card key={key} {...cardProps} />
+          ))}
+        </div>
+        <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
+      </section>
+    );
   }
 }
 
