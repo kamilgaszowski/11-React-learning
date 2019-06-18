@@ -12,21 +12,26 @@ export const settings = {
   },
   header: {
     logo: 'gem',
-    links: [
+    homeLink: 
       {
         key: 0,
         title: 'Home',
+        path: '/',
       },
+    infoLink:
       {
         key: 1,
         title: 'Info',
+        path: '/info',
       },
+    faqLink:
       {
         key: 2,
         title: 'FAQ',
+        path: 'faq',
       },
     
-    ],
+  
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
