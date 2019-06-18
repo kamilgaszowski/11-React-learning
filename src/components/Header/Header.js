@@ -2,8 +2,7 @@ import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import styles from './Header.scss';
 import Container from '../Container/Container';
-
-
+import {settings} from '../../data/dataStore';
 import Icon from '../Icon';
 
 class Header extends React.Component {
@@ -14,7 +13,7 @@ class Header extends React.Component {
         <Container>
           <div className={styles.wrapper}>
             <Link to={'/'} className={styles.logo} >
-              <Icon name='gem'/>
+              <Icon name={settings.header.logo}/>
             </Link>
             <nav>
               <NavLink exact to='/' activeClassName='active'>Home</NavLink>
