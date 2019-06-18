@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator.js';
+import Container from '../Container/Container.js';
 
 
 class List extends React.Component {
@@ -27,21 +28,22 @@ class List extends React.Component {
       const {title, image, description, columns, addColumn} = this.props;
       return (
         <section className = {styles.component}>
-          <Hero title={title} image={image} />
-          <div className={styles.description}>
-            {ReactHtmlParser(description)}
-          </div>
+          <Container>
+            <Hero title={title} image={image} />
+            <div className={styles.description}>
+              {ReactHtmlParser(description)}
+            </div>
           
-          <div className={styles.columns}>
-            {columns.map(columnData => (
-              <Column key={columnData.id} {...columnData} />
-            ))}
-          </div>
+            <div className={styles.columns}>
+              {columns.map(columnData => (
+                <Column key={columnData.id} {...columnData} />
+              ))}
+            </div>
           
-          <div className={styles.creator}>
-            <Creator text={settings.columnCreatorText} action={addColumn}/>
-          </div>
-            
+            <div className={styles.creator}>
+              <Creator text={settings.columnCreatorText} action={addColumn}/>
+            </div>
+          </Container>
 
         </section>
       );
