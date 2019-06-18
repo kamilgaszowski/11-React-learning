@@ -141,6 +141,18 @@ const cards = [
   },
 ];
 
+export const infoData = {
+  title: 'Info',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+
+};
+
+export const faqData = {
+  title: 'FAQ',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+
+};
+
 const initialStoreData = {
   app: {...pageContents},
   lists: [...lists],
