@@ -15,7 +15,6 @@ class Search extends React.Component {
     changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
     countAll: PropTypes.number,
-    history: PropTypes.node,
   }
 
   static defaultProps = {
@@ -35,6 +34,7 @@ class Search extends React.Component {
 
   handleOK(){
     this.props.changeSearchString(this.state.value);
+    // eslint-disable-next-line react/prop-types
     this.props.history.push(`/search/${this.state.value}`);
   }
 

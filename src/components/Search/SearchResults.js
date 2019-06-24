@@ -29,21 +29,7 @@ class SearchResults extends React.Component {
     value: this.props.searchString || '',
   }
 
-  handleChange(event){
-    this.setState({
-      value: event.target.value,
-    });
-  }
-
-  handleOK(){
-    this.props.changeSearchString(this.state.value);
-
-  }
-
-  componentWillReceiveProps(newProps){
-    this.setState({value: newProps.searchString});
-  }
-  
+ 
   render() {
     const {title, icon, cards, addCard} = this.props;
    
