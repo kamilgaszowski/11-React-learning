@@ -1,12 +1,17 @@
 {
   "name": "react-to-do",
   "version": "1.0.0",
+  "engines": {
+     "node": "12.3.1",
+     "npm": "6.9.0"
+   },
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "server": "http-server dist"
   },
   "husky": {
     "hooks": {
